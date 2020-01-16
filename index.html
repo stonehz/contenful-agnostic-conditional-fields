@@ -24,8 +24,18 @@
       const initialEntry = extension.entry.getSys();
       console.log("Parameter Values", extension.parameters.instance);
       console.log("Extension object", extension);
-      extension.window.startAutoResizer()
-      
+      console.log(extension.entry.fields);
+      console.log(extension.field.getValue());
+      extension.entry.fields[extension.parameters.instance.booleanField].onValueChanged(function(value) {
+        console.log("Current Value is:", value);
+        if (value) {
+          console.log("SHOW THIS FIELD", extension.parameters.instance.shownField)
+        } else {
+          console.log("SHOW THIS FIELD", extension.parameters.instance.hiddenField)
+        }    
+      });
+      extension.window.startAutoResizer();
+
     });
   </script>
 </body>
