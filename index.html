@@ -19,20 +19,19 @@
   </div>
   <script>
     document.getElementById('root').style.display = 'block';
-    
+    frameEl = window.frameElement;
+    console.log("Parent Element", frameEl);
     window.contentfulExtension.init(function (extension) {
-      
       extension.entry.fields[extension.parameters.instance.booleanField].onValueChanged(function(value) {
         console.log("Value is:", value);
         var hideFieldQuery = 'div[data-field-api-name="' + extension.parameters.instance.hiddenField + '"]';
         var showFieldQuery = 'div[data-field-api-name="' + extension.parameters.instance.shownField + '"]';
-        console.log(document.querySelectorAll('rulesBox'));
         if (value) {
-          var showHTML = document.querySelectorAll(showFieldQuery);
-          showHTML[0].style.display = "block";
+          // var showHTML = document.querySelectorAll(showFieldQuery);
+          // showHTML[0].style.display = "block";
         } else {
-          var hiddenHTML = document.querySelectorAll(hideFieldQuery);
-          hiddenHTML[0].style.display = "none";
+          // var hiddenHTML = document.querySelectorAll(hideFieldQuery);
+          // hiddenHTML[0].style.display = "none";
         }    
       });
       
