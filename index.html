@@ -19,9 +19,13 @@
   </div>
   <script>
     document.getElementById('root').style.display = 'block';
-    const initialEntry = extension.entry.getSys();
     window.contentfulExtension.init(function (extension) {
+
+      const initialEntry = extension.entry.getSys();
+      console.log("Parameter Values", extension.parameters.instance);
+      console.log("Extension object", extension);
       extension.window.startAutoResizer()
+      
     });
   </script>
 </body>
