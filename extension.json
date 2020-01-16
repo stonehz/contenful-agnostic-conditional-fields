@@ -1,0 +1,30 @@
+{
+  "id": "conditionalMenuItems",
+  "name": "Conditional Fields 0.1",
+  "srcdoc": "./index.html",
+  "fieldTypes": ["Symbol"],
+  "sidebar": true,
+  "parameters": {
+    "instance": [
+      {
+        "id": "booleanField",
+        "type": "Symbol",
+        "name": "Name of the Boolean field ID",
+        "description": "Provide the name of the id which defines the boolean",
+        "required": true
+      },
+      {
+        "id": "HiddenField",
+        "type": "Symbol",
+        "name": "ID of the field to hide if boolean is false",
+        "description": "Which field to hide if boolean is false?"
+      },
+      {
+        "id": "ShownField",
+        "type": "Symbol",
+        "name": "ID of the field to show if boolean is true",
+        "description": "Which field to show if boolean is true?"
+      }
+    ]
+  }
+}
